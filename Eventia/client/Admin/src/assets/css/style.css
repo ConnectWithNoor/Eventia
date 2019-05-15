@@ -1,0 +1,31 @@
+.iconStyles {
+    font-size: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.buttonStyles {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    width: 150px;
+  }
+
+  .mt {
+      margin-top: 2.5rem;
+      width: 150px;
+  }
+
+  .px {
+    padding: 10px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .border{
+    border: 0.5px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    }
