@@ -27,24 +27,32 @@ route.get('/uni', (req, res) => {
 })
 
 route.put('/modify', (req, res) => {
-
+    
     const { t_id, t_name, uni_id, m_id, isPaid } = req.query
-
-    console.log(t_id, t_name, uni_id, m_id, isPaid)
 
     if (!t_id || !t_name || !uni_id || !m_id || !isPaid) {
         return res.status(400).send('Invalid Request')
     }
 
-    const UPDATE_QUERY = `update Team set t_name = "${t_name}", uni_id = ${uni_id}, m_id = ${m_id}, isPaid = ${isPaid} where t_id = ${t_id};`
+    const UPDATE_TEAM = `update Team set t_name = "${t_name}", m_id = ${m_id}, isPaid = ${isPaid} where t_id = ${t_id};`
 
-    sql.query(UPDATE_QUERY, (err, result) => {
+    const UPDATE_PARTICIAPANTS = `update Participants set uni_id = "${uni_id}" where t_id = ${t_id};`
+
+    sql.query(UPDATE_TEAM, (err, result) => {
         if (err) {
             return res.status(400).send('Invalid Request')
         }
+        console.log(1)
+    })
 
+    sql.query(UPDATE_PARTICIAPANTS, (err, result) => {
+        if (err) {
+            return res.status(400).send('Invalid Request')
+        }
+        console.log(2)
         return res.status(200).send(result)
     })
+
 })
 
 route.delete('/delete', (req, res) => {
