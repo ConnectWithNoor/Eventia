@@ -35,7 +35,7 @@ route.get('/', (req, res) => {
     function getIDs() {
         return new Promise((resolve, reject) => {
 
-            sql.query(`SELECT t_id FROM Team WHERE t_name='${t_name}'`, (err, result) => {
+            sql.query(`SELECT t_id FROM Team WHERE t_name='${t_name}' AND m_id=${m_id} AND uni_id = ${uni_id}`, (err, result) => {
                 t_id = result[0].t_id
 
             })
