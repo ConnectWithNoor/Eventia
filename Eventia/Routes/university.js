@@ -68,15 +68,4 @@ route.delete('/delete', (req, res) => {
     })
 })
 
-route.get('/:id', (req, res) => {
-    sql.query(`SELECT * FROM University WHERE uni_id = '${req.params.id}'`, (err, result) => {
-        if (err) {
-            return res.status(400).send(`Invalid Query: ${err}`)
-        }
-
-        res.send(result)
-    })
-})
-
-
 module.exports = route

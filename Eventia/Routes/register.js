@@ -87,15 +87,4 @@ route.get('/', (req, res) => {
     }).catch(err => console.log(err))
 })
 
-
-route.get('/:id', (req, res) => {
-    sql.query(`SELECT * FROM Participants WHERE p_id = '${req.params.id}'`, (err, result) => {
-        if (err) {
-            return res.status(400).send(`Invalid Query: ${err}`)
-        }
-
-        res.send(result)
-    })
-})
-
 module.exports = route
