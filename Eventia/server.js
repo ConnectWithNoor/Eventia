@@ -18,7 +18,7 @@ const register = require('./Routes/register')
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
 app.get('/', (req, res) => {
-    res.send('Visit /api/participant for Participants details')
+    res.send('Visit /api/<path> for desired details')
 });
 
 app.use(bodyParser.json());
@@ -41,3 +41,5 @@ const server = app.listen(PORT, (err) => {
 
     console.log(`listening to port ${PORT}`)
 })
+
+// server.close()

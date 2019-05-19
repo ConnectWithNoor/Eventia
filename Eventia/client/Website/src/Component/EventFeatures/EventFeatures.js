@@ -4,7 +4,7 @@ import { Row, Col, Container } from 'react-bootstrap'
 import c2 from '../../assets/img/2.jpg';
 import c3 from '../../assets/img/3.jpg';
 import c4 from '../../assets/img/4.jpg';
-import foodPic from '../../assets/img/food2.png'
+import foodPic from '../../assets/img/1.jpg'
 import styled from 'styled-components';
 
 

@@ -12,7 +12,7 @@ class Timer extends Component {
     }
 
     getTime = async () => {
-        const countDownTime = await new Date("May 17, 2019 16:00:00").getTime();
+        const countDownTime = await new Date("May 19, 2019 16:00:00").getTime();
         const currentTime = await new Date().getTime();
         const differenceTime = countDownTime - currentTime;
 
