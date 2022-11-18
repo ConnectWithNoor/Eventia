@@ -9,7 +9,7 @@
     "react-dom": "^16.8.6",
     "react-notification-system": "^0.2.17",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
+    "react-scripts": "5.0.1",
     "react-scroll": "^1.7.11",
     "styled-components": "^4.2.0"
   },
